@@ -44,37 +44,23 @@ stampaConStelle($hotels, $valoreStelle);
 //funzione normale
 function stampaTuttoArray($hotels) {
 foreach($hotels as $hotel) {
-    echo "nome: " . $hotel['name'] . "<br>";
-    echo "descrizione: " . $hotel['description'] . "<br>";
-    echo "parcheggio: " . ($hotel['parking'] ? 'Sì' : 'No') . "<br>";
-    echo "voto: " . $hotel['vote'] . "<br>";
-    echo "distanza dal centro: " . $hotel['distance_to_center'] . " km<br><br>";
+stampaArray($hotel);
 }
 }
 
 function stampaConParcheggioStelle($hotels, $valoreStelle) {
 foreach($hotels as $hotel) {
 if ($hotel['parking'] && $hotel['vote'] == $valoreStelle){
-    echo "nome2: " . $hotel['name'] . "<br>";
-    echo "descrizione: " . $hotel['description'] . "<br>";
-    echo "parcheggio: " . ($hotel['parking'] ? 'Sì' : 'No') . "<br>";
-    echo "voto: " . $hotel['vote'] . "<br>";
-    echo "distanza dal centro: " . $hotel['distance_to_center'] . " km<br><br>";
+stampaArray($hotel);
 }
 }
 }
-
 
 function stampaConParcheggio($hotels) {
 foreach($hotels as $hotel) {
 
 if ($hotel['parking']){
-
-    echo "nome3: " . $hotel['name'] . "<br>";
-    echo "descrizione: " . $hotel['description'] . "<br>";
-    echo "parcheggio: " . ($hotel['parking'] ? 'Sì' : 'No') . "<br>";
-    echo "voto: " . $hotel['vote'] . "<br>";
-    echo "distanza dal centro: " . $hotel['distance_to_center'] . " km<br><br>";
+stampaArray($hotel);
 }
 }
 }
@@ -82,20 +68,19 @@ if ($hotel['parking']){
 function stampaConStelle($hotels, $valoreStelle) {
 foreach($hotels as $hotel) {
 if ($hotel['vote'] == $valoreStelle){ 
+stampaArray($hotel);
+}
+}
+}
+
+function stampaArray($hotel) {
     echo "nome4: " . $hotel['name'] . "<br>";
     echo "descrizione: " . $hotel['description'] . "<br>";
     echo "parcheggio: " . ($hotel['parking'] ? 'Sì' : 'No') . "<br>";
     echo "voto: " . $hotel['vote'] . "<br>";
     echo "distanza dal centro: " . $hotel['distance_to_center'] . " km<br><br>";
 }
-}
-}
-
-
 
 ?>
-
-
     </body>
     </html>
-
